@@ -1,0 +1,61 @@
+.wrapper {
+  .sec_01 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 15px;
+    main {
+      display: flex;
+      flex-direction: column;
+      border: solid;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: rgb(247, 242, 236);
+      border: solid rgb(119, 17, 17) 2px;
+      border-radius: 10px;
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        transition: 1s;
+      }
+      img {
+        width: 120px;
+      }
+      p {
+        margin-top: 10px;
+        font-family: inter;
+        font-weight: 400;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 5px;
+
+        b {
+          font-size: 22px;
+          font-family: roboto;
+        }
+        span {
+          font-family: roboto;
+          font-weight: 700;
+        }
+      }
+      button {
+        margin-top: 15px;
+        width: 120px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: brown;
+        color: white;
+        border: none;
+        font-size: 18px;
+        &:hover {
+          background-color: rgb(192, 61, 61);
+          cursor: pointer;
+        }
+      }
+    }
+  } // Sec_01 end scope
+} //Wrapper end scope
