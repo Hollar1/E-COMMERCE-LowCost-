@@ -5,16 +5,13 @@ import { useCart } from "../../pages/cart/Cart";
 
 function Items() {
   const { products, products_B } = useProduct_api_context([]);
-  const [productB, setProductB] = useState([]);
-  console.log(products_B);
-
-  const { addToCart } = useCart(); // use addToCart from context
+  
+  const { addToCart } = useCart();
 
   const removeTooLong = products_B.filter(
     (tooLong) => !tooLong.name.includes("Eau de Parfum - Floral Scent")
   );
 
-  console.log(removeTooLong);
   return (
     <div className={styles.wrapper}>
       <section className={styles.sec_01}>
@@ -40,7 +37,7 @@ function Items() {
 
       <section className={styles.sec_01}>
         {removeTooLong.map((item) => (
-          <main>
+          <main key={item.id}>
             <img src={item.image} alt="" />
             <p>{item.name}</p>
             <div>

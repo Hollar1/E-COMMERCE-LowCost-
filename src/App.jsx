@@ -7,6 +7,8 @@ import NavBar from "./components/navBar/NavBar";
 import ShopCategory from "./pages/shopCategory/ShopCategory";
 import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
+import NoPage from "./pages/noPage/NoPage";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
         <Route path="/kids" element={<ShopCategory category="kids" />} />
         <Route path="/product" element={<Product />} />
         <Route path="/:productId" element={<Product />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer />
     </Router>

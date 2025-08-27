@@ -1,0 +1,43 @@
+.parent_wrapper {
+  .wrapper {
+    height: calc(100vh - 121px);
+    width: 100%;
+    border: solid red 3px;
+    margin-top: 121px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+      }
+      strong {
+        font-family: roboto;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      p {
+        font-family: inter;
+        font-size: 18px;
+        font-weight: 450;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 10px;
+        width: 120px;
+        font-size: 16px;
+        height: 25px;
+        border: none;
+        border-radius: 6px;
+        background-color: rgb(213, 235, 243);
+      }
+    }
+  } // Wrapper scope ends here
+} // Parent_wrapper  scope ends here

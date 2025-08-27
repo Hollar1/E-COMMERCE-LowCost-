@@ -2,12 +2,16 @@ import { useState } from "react";
 import styles from "../navBar/navBar.module.scss";
 import shopping_bag from "../../assets/icons/shopping_bag.png";
 import shopping_cart from "../../assets/icons/shopping_cart.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../pages/cart/Cart";
 
 function NavBar() {
+  const navigate = useNavigate();
   const { cartItems } = useCart(); // get cart items
   const [isFocus, setIsFocus] = useState("");
+  const userEmail = localStorage.getItem("userEmail");
+  const userPassword = localStorage.getItem("userPassword");
+
   return (
     <div className={styles.parent_wrapper}>
       <nav>
@@ -69,8 +73,11 @@ function NavBar() {
 
         <div>
           <button>
-            <Link style={{ textDecoration: "none" }} to={"/login"}>
-              Login
+            <Link
+              style={{ textDecoration: "none" }}
+              to={userEmail && userPassword ? "/profile" : "/login"}
+            >
+              {userEmail && userPassword ? "Profile" : "Login"}
             </Link>
           </button>
 
